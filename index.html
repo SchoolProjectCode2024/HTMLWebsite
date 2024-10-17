@@ -20,12 +20,52 @@
 }
 
 #neutral {
-    color:  #e9e507 ;
+    color:  #e9e1007 ;
 }
-    table :hover{ 
- background-color: #4bcc07;
+p {
+  color: #b70a0a;
 }
-p {color: #b70a0a;}
+.cube {
+  width: 100px;
+  height: 100px;
+  top:500px;
+  left:700px;
+  background-color: brown;
+  position: absolute;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+
+  overflow: hidden;
+
+  animation-name: move;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+.cube :hover {
+background-color: white;
+}
+#cube2 {  
+  animation-delay: 4s;
+}
+#cube3 {  
+  animation-delay: 8s;
+}
+
+@keyframes move {
+  0%      {left: 700px; top: 0px;   transform: scale(0, 0);}
+  11.1%   {left: 750px; top: 0px;   transform: scale(1, 1);}
+  22.2%   {left: 800px; top: 0px;   transform: scale(0.25, 0.25);}
+  33.3%   {left: 800px; top: 100px; transform: scale(0.25, 0.25);}
+  44.4%   {left: 750px; top: 100px; transform: scale(1, 1);}
+  55.5%   {left: 700px; top: 100px; transform: scale(0.25, 0.25);}
+  66.6%   {left: 700px; top: 200px; transform: scale(0.25, 0.25);}
+  77.7%   {left: 750px; top: 200px; transform: scale(1, 1);}
+  88.8%   {left: 800px; top: 200px; transform: scale(0, 0);}
+  100%    {left: 800px; top: 200px; transform: scale(0, 0);}
+}
 </style>
 
 <body style="background-color:  black ; 
@@ -37,7 +77,6 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 <p>
     Porovnání
 </p>
-
 <table align="left" border="0">
     <tr>
       <th> </th>
@@ -75,9 +114,13 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 <br> <br> <br> <br><br> <br>
 <p>
 <h3>Osobní volba</h3>
-<i>Vybral jsem si službu hosta GitHub Pages. Omezení uložiště a bandwithu pro mé úžely nebyly problém. Primárně jsem si hosta vybíral podle 
-toho,<br> zda přidává na stránku své reklamy a možnost více správců pro možné skupinové projekty.<br> Další výhodou GitHub Pages bylo propojení se systémem GitHub.</i>
+<i>Vybral jsem si službu hosta GitHub Pages. Omezení uložiště a bandwithu pro mé úželi nebyly problém. Primárně jsem si vybíral podle 
+toho,<br> jestli host přidává na stránku své reklamy a možnosti více správců pro možné skupinové projekty.<br> Další výhodou GitHub Pages bylo propojení se systémem GitHub.</i>
 </p>
+
+<div class="cube">GitHub</div>
+<div class="cube" id="cube2">Netlify</div>
+<div class="cube" id="cube3">WordPress</div>
 </body>
 
 </html>
